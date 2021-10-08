@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dinosaurbbq.org</title>
-  </head>
-  <style>
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  </style>
-  <script>
-    console.log(`
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>dinosaurbbq.org</title>
+</head>
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.cool-dino {
+		margin: auto;
+		width: 100%;
+	}
+
+	@media (min-width: 760px) {
+		.cool-dino {
+			width: 500px;
+		}
+	}
+</style>
+<script>
+	console.log(`
                __
               / _)
      _.----._/ /
     /         /
  __/ (  | (  |
 /__.-'|_|--|_|
+join hack club https://hackclub.com
     `);
-  </script>
-  <body>
-    <main>
-      <img
+</script>
+
+<body>
+	<main id="main" onclick="getDinoed()">
+		<img
         src="https://cloud-ebrh7pvza-hack-club-bot.vercel.app/0733902c905.png"
         alt="Grinning dinosaur with sunglasses"
-        style="width: 500px; margin: auto"
+        class="cool-dino"
       />
       <img
         src="https://cloud-ct5vjsqed-hack-club-bot.vercel.app/0ac8eee04b2.png"
@@ -36,5 +50,16 @@
         style="width: 100%"
       />
     </main>
+    <script>
+      document.getElementById("main").onclick = function() {getDinoed()};
+
+      function getDinoed() {
+        document.getElementById("main").innerHTML = `
+        <img src="https://cloud-9k77ytf04-hack-club-bot.vercel.app/0ezgif-4-5e073c268e06.gif" style="width:100%; max-width: 1000px; margin: auto" />
+        `;
+      }
+    </script>
+
+
   </body>
 </html>
